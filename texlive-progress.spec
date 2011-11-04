@@ -49,6 +49,7 @@ the date appended (but is user-modifiable).
 %doc %{_texmfdistdir}/doc/latex/progress/progress.pdf
 %doc %{_texmfdistdir}/doc/latex/progress/progress.tex
 %doc %{_texmfdistdir}/doc/latex/progress/progress20030701.html
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +60,5 @@ the date appended (but is user-modifiable).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
