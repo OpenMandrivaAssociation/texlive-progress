@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Progress is a package which. when compiling TeX and LaTeX
@@ -27,20 +25,12 @@ document's state (of how finished it is). The report is sent to
 file \ProgressReportName, which is by default the \jobname with
 the date appended (but is user-modifiable).
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -50,7 +40,6 @@ the date appended (but is user-modifiable).
 %doc %{_texmfdistdir}/doc/latex/progress/progress.pdf
 %doc %{_texmfdistdir}/doc/latex/progress/progress.tex
 %doc %{_texmfdistdir}/doc/latex/progress/progress20030701.html
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,5 +50,3 @@ the date appended (but is user-modifiable).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
