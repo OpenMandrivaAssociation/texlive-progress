@@ -6,7 +6,7 @@
 # catalog-version 1.10
 Name:		texlive-progress
 Version:	1.10
-Release:	5
+Release:	6
 Summary:	Creates an overview of a document's state
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/progress
