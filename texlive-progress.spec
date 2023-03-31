@@ -1,6 +1,6 @@
 Name:		texlive-progress
 Version:	19519
-Release:	1
+Release:	2
 Summary:	Creates an overview of a document's state
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/progress
