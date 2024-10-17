@@ -3,7 +3,7 @@ Version:	19519
 Release:	2
 Summary:	Creates an overview of a document's state
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/progress
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/progress
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/progress.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/progress.doc.r%{version}.tar.xz
